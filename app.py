@@ -10,7 +10,9 @@ st.set_page_config(page_title="Diabetes Testimonial Chatbot", layout="wide")
 # -----------------------------
 # Gemini setup
 # -----------------------------
-genai.configure(api_key="AIzaSyD7sNDtT1jnEJtcCkz07whlghzz6IaVomU")
+#genai.configure(api_key="AIzaSyD7sNDtT1jnEJtcCkz07whlghzz6IaVomU")
+api_key = st.secrets["GEMINI_API_KEY"]
+genai.configure(api_key=api_key)
 model = genai.GenerativeModel("models/gemini-2.5-flash")
 
 # -----------------------------
